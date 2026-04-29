@@ -1,0 +1,196 @@
+.container-sobreMi {
+  background-color: white;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+}
+
+.mi-presentacion {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 30px;
+}
+
+.sobreMi-titulo {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 30px 15px 20px;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sobreMi-titulo::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: blueviolet;
+  border-radius: 2px;
+  margin: 6px auto 0;
+  opacity: 0.6;
+}
+
+.sobreMi-Foto {
+  flex: 0 0 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sobreMi-Foto img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  outline: 3px solid rgba(138, 43, 226, 0.2);
+  outline-offset: 4px;
+  transition: outline-color ease 0.3s;
+}
+
+.sobreMi-Foto img:hover {
+  outline-color: rgba(138, 43, 226, 0.5);
+}
+
+.linea-vertical {
+  width: 2px;
+  align-self: stretch;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(61, 61, 61) 20%,
+    rgb(61, 61, 61) 80%,
+    transparent
+  );
+}
+
+.sobreMi-Nombre {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(61, 61, 61);
+}
+
+.sobreMi-Descripcion {
+  flex: 1;
+  min-width: 300px;
+  color: rgb(61, 61, 61);
+}
+
+.habilidades {
+  padding: 0 30px 30px 30px;
+}
+
+hr {
+  width: 90%;
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.tecnologias.sobremi .tag {
+  cursor: default;
+  transition:
+    color ease 0.2s,
+    transform ease 0.15s,
+    box-shadow ease 0.2s;
+}
+
+.tecnologias.sobremi .tag:hover {
+  color: rgb(168, 83, 168);
+  transform: translateY(-2px);
+  box-shadow:
+    1px 3px 12px -2px blueviolet,
+    -1px -1px 10px -3px blueviolet;
+}
+
+/* Tablet pequeña / móvil grande */
+@media (max-width: 768px) {
+  .container-sobreMi {
+    margin: 0 16px;
+    max-width: 100%;
+  }
+
+  .sobreMi-titulo {
+    font-size: 2.4rem;
+  }
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+  .sobreMi-titulo {
+    font-size: 2rem;
+    margin: 20px 15px 16px;
+  }
+
+  .mi-presentacion {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 24px 20px;
+  }
+  .linea-vertical {
+    display: none;
+  }
+
+  .sobreMi-Descripcion {
+    min-width: unset;
+    width: 100%;
+    text-align: left;
+  }
+
+  .sobreMi-Nombre {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .habilidades {
+    padding: 0 20px 24px;
+  }
+
+  .habilidades .sobreMi-Nombre {
+    text-align: left;
+  }
+}
+
+/* Móvil muy pequeño — 344px */
+@media (max-width: 480px) {
+  .container-sobreMi {
+    margin: 0 10px;
+    border-radius: 8px;
+  }
+
+  .sobreMi-titulo {
+    font-size: 1.75rem;
+  }
+
+  .sobreMi-Foto img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .sobreMi-Foto {
+    flex: unset;
+  }
+
+  .mi-presentacion {
+    padding: 20px 16px;
+  }
+
+  .habilidades {
+    padding: 0 16px 20px;
+  }
+
+  .tecnologias.sobremi {
+    gap: 10px;
+  }
+
+  .tag {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+}

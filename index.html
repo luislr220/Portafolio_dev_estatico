@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/carousel.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/Foto_Mia.jpg"
+    />
+    <title>Inicio - Luis Armando</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./pages/sobreMi.html">Sobre mí</a></li>
+          <li><a href="./pages/contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- SECCIÓN DE MI BIENVENIDA -->
+
+    <div class="hero-section">
+      <div class="container-bienvenida">
+        <p class="hola">¡Hola!</p>
+        <p class="descripcion-bienvenida">
+          Mi nombre es <strong>Luis</strong> y busco crear experiencias donde la
+          lógica se encuentre con la creatividad.
+        </p>
+        <p class="descripcion-bienvenida2">
+          Si quieres ver un poco de mi trabajo, mira mis proyectos abajo.
+        </p>
+        <a href="#proyectos" class="btn-scroll">Ver Proyectos ↓</a>
+      </div>
+
+      <div class="decoracion-tecnica">
+        <pre><code>
+    {
+      "role": "FullStack Developer",
+      "specialty": "Logic & APIs",
+      "status": "Open to work"
+    }
+        </code></pre>
+      </div>
+    </div>
+
+    <!-- SECCIÓN DEL CAROUSEL -->
+    <p class="titulo-trabajo" id="proyectos">Mis Proyectos</p>
+
+    <div class="carousel-wrapper">
+      <button class="prev" id="prevBtn">&#10094;</button>
+
+      <div class="carousel-container">
+        <div class="carousel-slides">
+          <!-- Aqui se inserta el inner de js -->
+        </div>
+      </div>
+
+      <button class="next" id="nextBtn">&#10095;</button>
+    </div>
+
+    <script src="./js/carousel.js"></script>
+    <script src="./js/navbar.js"></script>
+  </body>
+</html>

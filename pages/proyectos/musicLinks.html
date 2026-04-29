@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyectos - Audux Studio</title>
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/navbar.css" />
+    <link rel="stylesheet" href="../../css/carouselProyectos.css" />
+    <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="../../assets/Foto_Mia.jpg"
+  />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../../index.html">Inicio</a></li>
+          <li><a href="../sobreMi.html">Sobre mí</a></li>
+          <li><a href="../contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <p class="container-btn-volver">
+      <a href="../../index.html">&larr; Volver al inicio</a>
+    </p>
+
+    <!-- DESCRIPCIÓN DEL PROYECTO -->
+    <div class="container-descripcion">
+      <p class="titulo-proyecto">MusicLinks</p>
+      <p class="descripcion-proyecto">
+        <a
+          href="https://feelthatpain.vercel.app/pages/promocion-page/promocion-page.html"
+          class="link-proyecto"
+        >
+          MusicLinks
+        </a>
+        es un micrositio de marca personal diseñado para centralizar la
+        presencia digital de mi proyecto musical
+        <strong>"Feel That Pain"</strong>. El objetivo principal fue crear un
+        punto de acceso unificado (Link-in-bio) totalmente controlado, evitando
+        la dependencia de plataformas de terceros.
+      </p>
+      <p class="descripcion-proyecto">
+        Técnicamente, el proyecto se centró en la implementación de un diseño
+        <strong>Mobile-First</strong> utilizando HTML5 y CSS3 puro. Me enfoqué
+        en la optimización de carga y la jerarquía visual para asegurar que la
+        experiencia del usuario sea fluida al navegar entre servicios de
+        streaming como Spotify, Youtube y YT Music.
+      </p>
+      <p class="descripcion-proyecto">
+        Este desarrollo me permitió practicar la estructuración de layouts
+        mediante <strong>Flexbox</strong> y el manejo de activos multimedia
+        ligeros, garantizando un despliegue rápido y eficiente en entornos de
+        hosting estático como Vercel.
+      </p>
+    </div>
+
+    <!-- DEMOSTRACIÓN -->
+    <div class="container-demostracion">
+      <!-- CAROUSEL -->
+
+      <p class="titulo-caro_gale">Galeria del proyecto</p>
+
+      <div class="carousel-container">
+        <div class="carousel-slides">
+          <!-- Aqui se inserta el inner de js -->
+        </div>
+
+        <button class="prev" id="prevBtn">&#10094;</button>
+        <button class="next" id="nextBtn">&#10095;</button>
+      </div>
+
+      <!-- SECCIÓN DEL VIDEO -->
+
+      <p class="titulo-caro_gale">Video demostrativo</p>
+
+      <div class="contenedor-video">
+        <div id="video"></div>
+      </div>
+
+      <p class="titulo-caro_gale">Tecnologias implementadas</p>
+
+      <!-- SECCIÓN DE LAS TECNOOGIAS -->
+      <div class="tecnologias">
+        <p class="tag">HTML5</p>
+        <p class="tag">CSS3</p>
+        <p class="tag">Responsive Design</p>
+        <p class="tag">Vercel Deployment</p>
+        <p class="tag">UI/UX Basics</p>
+      </div>
+    </div>
+
+    <script src="../../js/youtube-api.js"></script>
+    <script src="../../js/carouselProyectos.js"></script>
+    <script src="../../js/proyectos/musicLinks.js"></script>
+  </body>
+</html>

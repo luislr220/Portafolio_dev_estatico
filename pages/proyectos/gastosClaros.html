@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyectos - Gastos Claros</title>
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/navbar.css" />
+    <link rel="stylesheet" href="../../css/carouselProyectos.css" />
+    <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="../../assets/Foto_Mia.jpg"
+  />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../../index.html">Inicio</a></li>
+          <li><a href="../sobreMi.html">Sobre mí</a></li>
+          <li><a href="../contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <p class="container-btn-volver">
+      <a href="../../index.html">&larr; Volver al inicio</a>
+    </p>
+
+    <!-- DESCRIPCIÓN DEL PROYECTO -->
+    <div class="container-descripcion">
+      <p class="titulo-proyecto">Gastos Claros</p>
+      <p class="descripcion-proyecto">
+        Gastos Claros es una app que soluciona la falta de control sobre los
+        gastos personales. Muchas personas llegan a fin de mes sin saber en qué
+        gastaron su dinero, y esta herramienta nació precisamente para resolver
+        ese problema.
+      </p>
+      <p class="descripcion-proyecto">
+        El usuario puede registrar sus movimientos de forma rápida: escribe qué
+        compró o en qué gastó, la cantidad, y el gasto se clasifica
+        automáticamente en una categoría. En una sola pantalla se visualizan
+        todas las operaciones; el panel principal muestra el total acumulado, un
+        listado de gastos (que se pueden editar o eliminar) y una gráfica con
+        los totales por categoría.
+      </p>
+      <p class="descripcion-proyecto">
+        Cada registro es único, por lo que si registra un gasto con el mismo
+        nombre y ya existe otro similar, al borrar uno no se eliminarán ambos.
+        Actualmente el proyecto guarda los datos en memoria, pero está preparado
+        para conectarse a con una base de datos.
+      </p>
+    </div>
+
+    <!-- DEMOSTRACIÓN -->
+    <div class="container-demostracion">
+      <!-- CAROUSEL -->
+
+      <p class="titulo-caro_gale">Galeria del proyecto</p>
+
+      <div class="carousel-container">
+        <div class="carousel-slides">
+          <!-- Aqui se inserta el inner de js -->
+        </div>
+
+        <button class="prev" id="prevBtn">&#10094;</button>
+        <button class="next" id="nextBtn">&#10095;</button>
+      </div>
+
+      <!-- SECCIÓN DEL VIDEO -->
+
+      <p class="titulo-caro_gale">Video demostrativo</p>
+
+      <div class="contenedor-video">
+        <div id="video"></div>
+      </div>
+
+      <p class="titulo-caro_gale">Tecnologias implementadas</p>
+
+      <!-- SECCIÓN DE LAS TECNOOGIAS -->
+      <div class="tecnologias">
+        <p class="tag">Angular 19+</p>
+        <p class="tag">NodeJS</p>
+        <p class="tag">Express</p>
+        <p class="tag">Chart.js</p>
+      </div>
+    </div>
+
+    <script src="../../js/youtube-api.js"></script>
+    <script src="../../js/carouselProyectos.js"></script>
+    <script src="../../js/proyectos/gastosClaros.js"></script>
+  </body>
+</html>

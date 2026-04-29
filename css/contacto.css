@@ -1,0 +1,174 @@
+.container-contacto-minimal {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.card-contacto-directo {
+  background: white;
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.header-contacto h3 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.header-contacto p {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.grid-enlaces {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.enlace-card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: #fcfaff;
+  border: 2px solid #f0e6ff;
+  border-radius: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.enlace-card:hover {
+  transform: translateY(-3px);
+  border-color: #8b1fff;
+  background: #ffffff;
+  box-shadow: 0 5px 15px rgba(139, 31, 255, 0.1);
+}
+
+.enlace-card.principal {
+  background: #8b1fff;
+  border-color: #8b1fff;
+}
+
+.enlace-card.principal .enlace-texto span,
+.enlace-card.principal .enlace-texto p,
+.enlace-card.principal .icon-container {
+  color: white;
+}
+
+.icon-container {
+  font-size: 1.5rem;
+  margin-right: 20px;
+  background: #f0e6ff;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: #8b1fff;
+}
+
+.icon-container img {
+  width: 30px;
+  height: 30px;
+}
+
+.enlace-card.principal .icon-container {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.enlace-texto span {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #8b1fff;
+}
+
+.enlace-texto p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.sobreMi-titulo {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 15px;
+}
+
+.contacto-seccion {
+  padding-bottom: 40px;
+}
+
+/* ── RESPONSIVE ── */
+
+@media (max-width: 600px) {
+  .card-contacto-directo {
+    padding: 30px 20px;
+    border-radius: 14px;
+  }
+
+  .header-contacto h3 {
+    font-size: 1.5rem;
+  }
+
+  .header-contacto p {
+    font-size: 1rem;
+    margin-bottom: 28px;
+  }
+
+  .sobreMi-titulo {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-contacto-minimal {
+    padding: 0 12px;
+    margin: 24px auto;
+  }
+
+  .card-contacto-directo {
+    padding: 24px 16px;
+    border-radius: 12px;
+  }
+
+  .header-contacto h3 {
+    font-size: 1.3rem;
+  }
+
+  .enlace-card {
+    padding: 14px;
+  }
+
+  .enlace-texto p {
+    font-size: 0.78rem;
+    word-break: break-all;
+  }
+
+  .enlace-texto span {
+    font-size: 1rem;
+  }
+
+  .icon-container {
+    width: 42px;
+    height: 42px;
+    margin-right: 14px;
+  }
+
+  .icon-container img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .sobreMi-titulo {
+    font-size: 1.9rem;
+  }
+}

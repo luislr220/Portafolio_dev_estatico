@@ -1,0 +1,142 @@
+.carousel-wrapper {
+  position: relative;
+  max-width: 1300px;
+  margin: auto;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.carousel-container {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.carousel-slides {
+  display: flex;
+  width: 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+  width: 100%;
+}
+
+.box-image {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.box-image img {
+  width: 100%;
+  display: block;
+}
+
+.box-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 65%, black);
+  z-index: 1;
+}
+
+.btn-link {
+  color: white;
+  font-weight: bold;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  color: white;
+  z-index: 2;
+}
+
+/* ── BOTONES fuera de la imagen ── */
+.prev,
+.next {
+  flex-shrink: 0;
+  background: rgba(20, 20, 20, 0.75);
+  color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  width: 44px;
+  height: 100px;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+  position: static;
+  transform: none;
+  z-index: auto;
+}
+
+.prev:hover,
+.next:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: white;
+}
+
+/* ── RESPONSIVE ── */
+
+@media (max-width: 600px) {
+  .carousel-wrapper {
+    gap: 8px;
+    margin-bottom: 36px;
+  }
+
+  .carousel-container {
+    border-radius: 8px;
+  }
+
+  .prev,
+  .next {
+    width: 36px;
+    height: 72px;
+    border-radius: 18px;
+    font-size: 0.85rem;
+  }
+
+  .caption {
+    padding: 12px 14px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-wrapper {
+    margin: 0 10px 10px 10px;
+    gap: 6px;
+  }
+
+  .prev,
+  .next {
+    width: 32px;
+    height: 60px;
+    border-radius: 16px;
+    font-size: 0.75rem;
+  }
+
+  .caption {
+    padding: 10px 12px;
+    font-size: 0.82rem;
+  }
+
+  .box-image::after {
+    background: rgb(0, 0, 0, 0.4);
+  }
+}

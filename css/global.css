@@ -1,0 +1,196 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  background: #d6d5d5ab;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ESTILOS PARA LAS DEMOSTRACIONES DE LOS PROYECTOS */
+
+.container-btn-volver {
+  padding: 20px 0 20px 80px;
+}
+
+.container-btn-volver a {
+  font-weight: 600;
+}
+
+.contenedor-video {
+  position: relative;
+  max-width: 1300px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 50px;
+}
+
+#video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #eee;
+}
+
+.descripcion-proyecto {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  color: rgb(61, 61, 61);
+}
+
+.container-descripcion {
+  padding-left: 80px;
+  width: 65%;
+}
+
+.container-demostracion {
+  padding-left: 80px;
+}
+
+.titulo-proyecto {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.titulo-caro_gale {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-left: 50px;
+  margin: 30px;
+}
+
+.tecnologias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  max-width: 1300px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.tag {
+  border: 0.5px solid rgb(138, 43, 226, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow:
+    1px 1px 10px -3px blueviolet,
+    -1px -1px 10px -3px blueviolet;
+  color: blueviolet;
+  transition: color ease 0.2s;
+  font-weight: bold;
+  background: white;
+}
+
+.tag:hover {
+  color: rgb(168, 83, 168);
+}
+
+.link-proyecto {
+  font-weight: bold;
+  color: blueviolet;
+  text-decoration: underline;
+  transition: color ease 0.2s;
+}
+
+.link-proyecto:hover {
+  color: rgb(168, 83, 168);
+}
+
+nav ul li a.active {
+  color: #8b1fff;
+  font-weight: bold;
+  border-bottom: 2px solid #8b1fff;
+}
+
+/* ── RESPONSIVE ── */
+
+@media (max-width: 768px) {
+  .container-descripcion {
+    padding-left: 40px;
+    width: 80%;
+  }
+
+  .container-demostracion {
+    padding-left: 40px;
+  }
+
+  .container-btn-volver {
+    padding-left: 40px;
+  }
+
+  .titulo-proyecto {
+    font-size: 2.4rem;
+  }
+
+  .descripcion-proyecto {
+    font-size: 1.25rem;
+  }
+
+  .titulo-caro_gale {
+    padding-left: 20px;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .container-descripcion {
+    padding: 0 16px;
+    width: auto;
+    box-sizing: border-box;
+  }
+
+  .container-demostracion {
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  .container-btn-volver {
+    padding: 16px 0 16px 16px;
+  }
+
+  .titulo-proyecto {
+    font-size: 2rem;
+  }
+
+  .descripcion-proyecto {
+    font-size: 1.1rem;
+  }
+
+  .titulo-caro_gale {
+    font-size: 1.25rem;
+    padding-left: 0;
+    margin: 20px 0 12px;
+  }
+
+  .contenedor-video {
+    border-radius: 8px;
+    margin-bottom: 32px;
+  }
+
+  .tecnologias {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-proyecto {
+    font-size: 1.75rem;
+  }
+
+  .descripcion-proyecto {
+    font-size: 1rem;
+  }
+
+  .titulo-caro_gale {
+    font-size: 1.1rem;
+  }
+
+  .tag {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+}

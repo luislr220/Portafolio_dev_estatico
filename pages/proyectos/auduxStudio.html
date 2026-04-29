@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyectos - Audux Studio</title>
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/navbar.css" />
+    <link rel="stylesheet" href="../../css/carouselProyectos.css" />
+    <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="../../assets/Foto_Mia.jpg"
+  />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../../index.html">Inicio</a></li>
+          <li><a href="../sobreMi.html">Sobre mí</a></li>
+          <li><a href="../contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <p class="container-btn-volver">
+      <a href="../../index.html">&larr; Volver al inicio</a>
+    </p>
+
+    <!-- DESCRIPCIÓN DEL PROYECTO -->
+    <div class="container-descripcion">
+      <p class="titulo-proyecto">Audux Studio</p>
+      <p class="descripcion-proyecto">
+        <a href="https://auduxstudio.com/" class="link-proyecto"
+          >Audux Studio</a
+        >
+        es una plataforma de procesamiento multimedia orientada a la separación
+        de pistas (vocal e instrumental), extracción de líricas y generación
+        automática de videos de karaoke mediante inteligencia artificial.
+      </p>
+      <p class="descripcion-proyecto">
+        En el núcleo técnico, lideré el desarrollo de herramientas de filtrado y
+        ecualización para el perfeccionamiento del audio extraído, además de
+        gestionar la arquitectura DevOps mediante Docker Compose y el despliegue
+        en un entorno VPS escalable.
+      </p>
+      <p class="descripcion-proyecto">
+        Fortalecí la seguridad del sistema evolucionando el acceso básico hacia
+        un modelo de autenticación de dos factores (2FA) e integrando Cloudflare
+        Turnstile para mitigar ataques automatizados, garantizando que el
+        procesamiento de recursos en la nube sea exclusivo para usuarios
+        legítimos.
+      </p>
+      <p class="descripcion-proyecto">
+        Esta solución resuelve la problemática del cliente al automatizar
+        procesos de edición complejos, eliminando la necesidad de software
+        especializado y hardware de alto rendimiento para el usuario final.
+      </p>
+    </div>
+
+    <!-- DEMOSTRACIÓN -->
+    <div class="container-demostracion">
+      <!-- CAROUSEL -->
+
+      <p class="titulo-caro_gale">Galeria del proyecto</p>
+
+      <div class="carousel-container">
+        <div class="carousel-slides">
+          <!-- Aqui se inserta el inner de js -->
+        </div>
+
+        <button class="prev" id="prevBtn">&#10094;</button>
+        <button class="next" id="nextBtn">&#10095;</button>
+      </div>
+
+      <!-- SECCIÓN DEL VIDEO -->
+
+      <p class="titulo-caro_gale">Video demostrativo</p>
+
+      <div class="contenedor-video">
+        <div id="video"></div>
+      </div>
+
+      <p class="titulo-caro_gale">Tecnologias implementadas</p>
+
+      <!-- SECCIÓN DE LAS TECNOOGIAS -->
+      <div class="tecnologias">
+        <p class="tag">React/vite.js</p>
+        <p class="tag">NodeJS</p>
+        <p class="tag">Express</p>
+        <p class="tag">wavesurfer.js</p>
+        <p class="tag">Docker</p>
+        <p class="tag">Nginx</p>
+        <p class="tag">nodemailer</p>
+        <p class="tag">FFmpeg</p>
+        <p class="tag">VPS</p>
+      </div>
+    </div>
+
+    <script src="../../js/youtube-api.js"></script>
+    <script src="../../js/carouselProyectos.js"></script>
+    <script src="../../js/proyectos/auduxStudio.js"></script>
+  </body>
+</html>

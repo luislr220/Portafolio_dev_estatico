@@ -1,0 +1,156 @@
+.hero-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.hola {
+  font-size: 100px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.container-bienvenida {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.decoracion-tecnica {
+  flex: 1;
+  min-width: 300px;
+  background-color: #282c34;
+  color: #e06c75;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 10px 10px 0px rgba(138, 43, 226, 0.2);
+  font-family: "Consolas", "Monaco", monospace;
+  font-size: 1.1rem;
+  user-select: none;
+}
+
+.decoracion-tecnica code {
+  color: #98c379;
+}
+
+.decoracion-tecnica span {
+  color: #61afef;
+}
+
+.btn-scroll {
+  display: inline-block;
+  margin-top: 20px;
+  color: blueviolet;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid blueviolet;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-scroll:hover {
+  background-color: blueviolet;
+  color: white;
+}
+
+.titulo-trabajo {
+  text-align: center;
+  font-size: 40px;
+  margin: 0;
+  margin-bottom: 20px;
+  color: rgb(61, 61, 61);
+  font-weight: bold;
+}
+
+.descripcion-bienvenida {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  color: rgb(61, 61, 61);
+}
+
+.descripcion-bienvenida2 {
+  font-weight: bold;
+  margin: 0;
+  color: blueviolet;
+  font-size: 1.5rem;
+}
+
+/* ── RESPONSIVE ── */
+
+@media (max-width: 768px) {
+  .hero-section {
+    margin: 40px auto;
+    gap: 30px;
+  }
+
+  .hola {
+    font-size: 72px;
+  }
+
+  .descripcion-bienvenida,
+  .descripcion-bienvenida2 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    flex-direction: column;
+    margin: 30px auto;
+    gap: 24px;
+    padding: 16px;
+  }
+
+  .container-bienvenida {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .hola {
+    font-size: 56px;
+  }
+
+  .descripcion-bienvenida,
+  .descripcion-bienvenida2 {
+    font-size: 1.1rem;
+  }
+
+  .decoracion-tecnica {
+    min-width: unset;
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 6px 6px 0px rgba(138, 43, 226, 0.2);
+  }
+
+  .titulo-trabajo {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hola {
+    font-size: 48px;
+  }
+
+  .descripcion-bienvenida,
+  .descripcion-bienvenida2 {
+    font-size: 1rem;
+  }
+
+  .decoracion-tecnica {
+    font-size: 0.8rem;
+    padding: 16px;
+  }
+
+  .titulo-trabajo {
+    font-size: 26px;
+  }
+}
