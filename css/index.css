@@ -11,8 +11,12 @@
 
 .hola {
   font-size: 70px;
-  margin: 0;
-  font-weight: bold;
+  margin: 0 0 4px;
+  font-weight: 800;
+  font-family: "Syne", sans-serif;
+  letter-spacing: -1px;
+  color: #1a1a1a;
+  text-shadow: 0 0 40px rgba(112, 38, 177, 0.18);
 }
 
 .container-bienvenida {
@@ -24,14 +28,18 @@
 .decoracion-tecnica {
   flex: 1;
   min-width: 300px;
-  background-color: #282c34;
-  color: #7026B1;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 5px 5px 1px rgba(138, 43, 226, 0.2);
+  background-color: #1c1f26;
+  color: #7026b1;
+  padding: 28px 30px;
+  border-radius: 10px;
+  border-left: 3px solid #7026b1;
+  box-shadow:
+    0 0 30px rgba(112, 38, 177, 0.12),
+    4px 4px 0px rgba(112, 38, 177, 0.15);
   font-family: "Consolas", "Monaco", monospace;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   user-select: none;
+  line-height: 1.7;
 }
 
 .decoracion-tecnica code {
@@ -44,42 +52,63 @@
 
 .btn-scroll {
   display: inline-block;
-  margin-top: 20px;
-  color: #333333;
+  margin-top: 22px;
+  color: #333;
   text-decoration: none;
-  font-weight: bold;
-  border: 2px solid rgb(61, 61, 61);
-  padding: 10px 20px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
+  border: 1.5px solid #3d3d3d;
+  padding: 10px 22px;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+  letter-spacing: 0.03em;
+  font-size: 0.9rem;
 }
 
 .btn-scroll:hover {
-  background-color: none;
-  color: #7026B1;
-  border: 2px solid #7026B1;
+  color: #7026b1;
+  border-color: #7026b1;
+  box-shadow: 0 0 14px rgba(112, 38, 177, 0.2);
 }
 
 .titulo-trabajo {
   text-align: center;
-  font-size: 40px;
-  margin: 0;
-  margin-bottom: 20px;
-  color: #333333;
-  font-weight: bold;
+  font-size: 38px;
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin: 0 0 24px;
+  color: #1a1a1a;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.titulo-trabajo::after {
+  content: "";
+  display: block;
+  margin: 8px auto 0;
+  width: 40px;
+  height: 3px;
+  background: #7026b1;
+  border-radius: 2px;
 }
 
 .descripcion-bienvenida {
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   margin-bottom: 0;
-  color: #333333;
+  color: #333;
+  line-height: 1.5;
+  font-weight: 400;
 }
 
 .descripcion-bienvenida2 {
-  font-weight: bold;
-  margin: 0;
-  color: #7026B1;
-  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 6px 0 0;
+  color: #7026b1;
+  font-size: 1.45rem;
+  line-height: 1.5;
 }
 
 /* ── RESPONSIVE ── */
@@ -89,19 +118,15 @@
     margin: 40px auto;
     gap: 30px;
   }
-
   .hola {
-    font-size: 72px;
+    font-size: 64px;
   }
-
   .descripcion-bienvenida,
   .descripcion-bienvenida2 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
-
-  .btn-scroll{
-    max-width: 100px;
-    font-size: 0.8rem;
+  .btn-scroll {
+    font-size: 0.85rem;
   }
 }
 
@@ -112,51 +137,42 @@
     gap: 24px;
     padding: 16px;
   }
-
   .container-bienvenida {
     min-width: unset;
     width: 100%;
   }
-
   .hola {
-    font-size: 56px;
+    font-size: 52px;
   }
-
   .descripcion-bienvenida,
   .descripcion-bienvenida2 {
     font-size: 1.1rem;
   }
-
   .decoracion-tecnica {
     min-width: unset;
     width: 100%;
-    font-size: 0.9rem;
-    padding: 20px;
+    font-size: 0.88rem;
+    padding: 20px 18px;
     box-sizing: border-box;
-    box-shadow: 6px 6px 0px rgba(138, 43, 226, 0.2);
   }
-
   .titulo-trabajo {
-    font-size: 30px;
+    font-size: 28px;
   }
 }
 
 @media (max-width: 480px) {
   .hola {
-    font-size: 48px;
+    font-size: 44px;
   }
-
   .descripcion-bienvenida,
   .descripcion-bienvenida2 {
     font-size: 1rem;
   }
-
   .decoracion-tecnica {
     font-size: 0.8rem;
     padding: 16px;
   }
-
   .titulo-trabajo {
-    font-size: 26px;
+    font-size: 24px;
   }
 }

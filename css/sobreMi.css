@@ -1,9 +1,11 @@
 .container-sobreMi {
   background-color: white;
-  margin: auto;
+  margin: 0 auto 60px;
   border-radius: 10px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.07);
   max-width: 900px;
+  border-top: 3px solid var(--accent);
+  overflow: hidden;
 }
 
 .mi-presentacion {
@@ -11,29 +13,31 @@
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
-  padding: 30px;
+  padding: 36px 30px 30px;
 }
 
 .sobreMi-titulo {
+  font-family: "Syne", sans-serif;
   text-align: center;
   font-size: 3rem;
-  font-weight: bold;
-  margin: 30px 15px 20px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin: 36px 15px 24px;
   position: relative;
   display: inline-block;
   left: 50%;
   transform: translateX(-50%);
+  color: #1a1a1a;
 }
 
 .sobreMi-titulo::after {
   content: "";
   display: block;
-  width: 50px;
+  width: 40px;
   height: 3px;
-  background: blueviolet;
+  background: var(--accent);
   border-radius: 2px;
-  margin: 6px auto 0;
-  opacity: 0.6;
+  margin: 8px auto 0;
 }
 
 .sobreMi-Foto {
@@ -49,84 +53,105 @@
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
-  outline: 3px solid rgba(138, 43, 226, 0.2);
-  outline-offset: 4px;
-  transition: outline-color ease 0.3s;
+  outline: 2px solid rgba(112, 38, 177, 0.2);
+  outline-offset: 5px;
+  transition:
+    outline-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .sobreMi-Foto img:hover {
-  outline-color: rgba(138, 43, 226, 0.5);
+  outline-color: rgba(112, 38, 177, 0.55);
+  box-shadow: 0 0 24px rgba(112, 38, 177, 0.18);
 }
 
 .linea-vertical {
-  width: 2px;
+  width: 1px;
   align-self: stretch;
   background: linear-gradient(
     to bottom,
     transparent,
-    rgb(61, 61, 61) 20%,
-    rgb(61, 61, 61) 80%,
+    rgba(112, 38, 177, 0.25) 20%,
+    rgba(112, 38, 177, 0.25) 80%,
     transparent
   );
 }
 
 .sobreMi-Nombre {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: rgb(61, 61, 61);
+  font-family: "Syne", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 12px;
+  letter-spacing: -0.2px;
 }
 
 .sobreMi-Descripcion {
   flex: 1;
   min-width: 300px;
-  color: rgb(61, 61, 61);
+  color: var(--text-muted);
+}
+
+.sobreMi-descripcion {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #3d3d3d;
+  margin: 0 0 14px;
+}
+
+.sobreMi-descripcion strong {
+  color: var(--text-main);
+  font-weight: 600;
 }
 
 .habilidades {
-  padding: 0 30px 30px 30px;
+  padding: 24px 30px 30px;
 }
 
 hr {
   width: 90%;
   border: none;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  margin: 0 auto;
+}
+
+.tecnologias.sobremi {
+  margin-top: 14px;
 }
 
 .tecnologias.sobremi .tag {
   cursor: default;
   transition:
-    color ease 0.2s,
-    transform ease 0.15s,
-    box-shadow ease 0.2s;
+    color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
 }
 
 .tecnologias.sobremi .tag:hover {
-  color: rgb(168, 83, 168);
+  color: #5c1e92;
   transform: translateY(-2px);
   box-shadow:
-    1px 3px 12px -2px blueviolet,
-    -1px -1px 10px -3px blueviolet;
+    0 4px 14px -3px rgba(112, 38, 177, 0.35),
+    0 0 8px -2px rgba(112, 38, 177, 0.2);
 }
 
-/* Tablet pequeña / móvil grande */
+/* ── RESPONSIVE ── */
+
 @media (max-width: 768px) {
   .container-sobreMi {
-    margin: 0 16px;
+    margin: 0 16px 48px;
     max-width: 100%;
   }
-
   .sobreMi-titulo {
     font-size: 2.4rem;
   }
 }
 
-/* Móvil */
 @media (max-width: 600px) {
   .sobreMi-titulo {
     font-size: 2rem;
-    margin: 20px 15px 16px;
+    margin: 24px 15px 20px;
   }
-
   .mi-presentacion {
     flex-direction: column;
     align-items: center;
@@ -136,59 +161,47 @@ hr {
   .linea-vertical {
     display: none;
   }
-
   .sobreMi-Descripcion {
     min-width: unset;
     width: 100%;
     text-align: left;
   }
-
   .sobreMi-Nombre {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-align: center;
   }
-
   .habilidades {
-    padding: 0 20px 24px;
+    padding: 20px 20px 24px;
   }
-
   .habilidades .sobreMi-Nombre {
     text-align: left;
   }
 }
 
-/* Móvil muy pequeño — 344px */
 @media (max-width: 480px) {
   .container-sobreMi {
-    margin: 0 10px;
+    margin: 0 10px 40px;
     border-radius: 8px;
   }
-
   .sobreMi-titulo {
     font-size: 1.75rem;
   }
-
   .sobreMi-Foto img {
     width: 160px;
     height: 160px;
   }
-
   .sobreMi-Foto {
     flex: unset;
   }
-
   .mi-presentacion {
     padding: 20px 16px;
   }
-
   .habilidades {
-    padding: 0 16px 20px;
+    padding: 16px 16px 20px;
   }
-
   .tecnologias.sobremi {
     gap: 10px;
   }
-
   .tag {
     font-size: 0.85rem;
     padding: 8px;

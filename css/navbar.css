@@ -1,80 +1,105 @@
 header {
-  position: relative;
-  background: white;
-  box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(244, 243, 240, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(112, 38, 177, 0.12);
 }
 
 nav {
   display: flex;
   justify-content: space-between;
-  margin: auto;
-  margin-right: 50px;
-  padding: 15px;
   align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 14px 40px;
 }
 
 ul {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 8px;
   margin: 0;
-  padding: 10px;
-  justify-content: end;
+  padding: 0;
+}
+
+li {
+  font-weight: 600;
 }
 
 a {
   text-decoration: none;
-  color: #333333;
-  font-size: 1.3rem;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
 }
 
-a:hover {
-  color: #7026B1;
+ul li a {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
 }
 
-li {
-  font-size: large;
-  font-weight: bold;
+ul li a:hover {
+  color: var(--accent);
+  background: rgba(112, 38, 177, 0.06);
 }
 
 .logo-nav {
-  margin-left: 30px;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-family: "Syne", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  color: #1a1a1a;
+  transition: color 0.2s ease;
+}
+
+.logo-nav p {
+  margin: 0;
+}
+
+.logo-nav:hover {
+  color: var(--accent);
 }
 
 /* ── RESPONSIVE ── */
 
 @media (max-width: 600px) {
   nav {
-    margin-right: 0;
-    padding: 10px 0;
-    justify-content: center;
+    padding: 10px 16px;
     flex-direction: column;
+    gap: 6px;
   }
 
   ul {
+    gap: 4px;
     justify-content: center;
-    gap: 24px;
-    padding: 8px 10px;
   }
 
   ul li a {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    padding: 5px 10px;
   }
 
   .logo-nav {
-    margin: auto;
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 }
 
 @media (max-width: 480px) {
   ul {
-    gap: 16px;
+    gap: 2px;
   }
 
-  a {
-    font-size: 1rem;
+  ul li a {
+    font-size: 0.8rem;
+    padding: 4px 8px;
   }
 }

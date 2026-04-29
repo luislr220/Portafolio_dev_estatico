@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@400;500;600&display=swap");
+
+:root {
+  --accent: #7026b1;
+  --accent-dim: rgba(112, 38, 177, 0.18);
+  --accent-glow: 0 0 18px rgba(112, 38, 177, 0.25);
+  --dark-bg: #1c1f26;
+  --text-main: #2e2e2e;
+  --text-muted: #555;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -7,7 +18,8 @@ body {
   background: #f4f3f0;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Outfit", Arial, Helvetica, sans-serif;
+  color: var(--text-main);
 }
 
 /* ESTILOS PARA LAS DEMOSTRACIONES DE LOS PROYECTOS */
@@ -36,14 +48,19 @@ body {
 }
 
 .descripcion-proyecto {
-  font-size: 1.5rem;
-  margin-bottom: 0;
-  color: rgb(61, 61, 61);
+  font-size: 1.1rem;
+  line-height: 1.75;
+  margin: 0 0 16px;
+  color: #3d3d3d;
+  max-width: 72ch;
 }
 
 .container-descripcion {
-  padding-left: 80px;
+  padding: 20px 80px 36px;
   width: 65%;
+  border-left: 3px solid var(--accent-dim);
+  margin-left: 80px;
+  padding-left: 28px;
 }
 
 .container-demostracion {
@@ -52,15 +69,33 @@ body {
 
 .titulo-proyecto {
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: 800;
+  font-family: "Syne", sans-serif;
   margin: 0;
+  letter-spacing: -0.5px;
 }
 
 .titulo-caro_gale {
-  font-size: 1.5rem;
-  font-weight: 600;
-  padding-left: 50px;
-  margin: 30px;
+  font-family: "Syne", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  color: var(--text-main);
+  padding-left: 0;
+  margin: 32px 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.titulo-caro_gale::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 1.1em;
+  background: var(--accent);
+  border-radius: 2px;
+  flex-shrink: 0;
 }
 
 .tecnologias {
@@ -73,25 +108,28 @@ body {
 }
 
 .tag {
-  border: 0.5px solid rgb(138, 43, 226, 0.3);
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow:
-    1px 1px 10px -3px #7026B1,
-    -1px -1px 10px -3px #7026B1;
-  color: #7026B1;
-  transition: color ease 0.2s;
-  font-weight: bold;
+  border: 1px solid rgba(112, 38, 177, 0.25);
+  padding: 8px 14px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px -2px rgba(112, 38, 177, 0.2);
+  color: var(--accent);
+  transition:
+    box-shadow 0.2s ease,
+    color 0.2s ease;
+  font-weight: 600;
+  font-size: 0.875rem;
   background: white;
+  letter-spacing: 0.02em;
 }
 
 .tag:hover {
   color: #5c1e92;
+  box-shadow: 0 0 16px -2px rgba(112, 38, 177, 0.35);
 }
 
 .link-proyecto {
   font-weight: bold;
-  color: #7026b1;
+  color: var(--accent);
   text-decoration: underline;
   transition: color ease 0.2s;
 }
@@ -101,9 +139,9 @@ body {
 }
 
 nav ul li a.active {
-  color: #7026b1;
+  color: var(--accent);
   font-weight: bold;
-  border-bottom: 2px solid #7026b1;
+  border-bottom: 2px solid var(--accent);
 }
 
 .btn-link {
@@ -116,12 +154,14 @@ nav ul li a.active {
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent; /* El blanco lo provee el fondo */
+  color: transparent;
+  font-weight: 700;
+  letter-spacing: 0.03em;
   animation: brillo 3s linear infinite;
 }
 
-.btn-link:hover{
-  color: white
+.btn-link:hover {
+  color: white;
 }
 
 @keyframes brillo {
@@ -140,23 +180,18 @@ nav ul li a.active {
     padding-left: 40px;
     width: 80%;
   }
-
   .container-demostracion {
     padding-left: 40px;
   }
-
   .container-btn-volver {
     padding-left: 40px;
   }
-
   .titulo-proyecto {
     font-size: 2.4rem;
   }
-
   .descripcion-proyecto {
     font-size: 1.25rem;
   }
-
   .titulo-caro_gale {
     padding-left: 20px;
     margin: 20px 0;
@@ -169,35 +204,28 @@ nav ul li a.active {
     width: auto;
     box-sizing: border-box;
   }
-
   .container-demostracion {
     padding: 0 16px;
     box-sizing: border-box;
   }
-
   .container-btn-volver {
     padding: 16px 0 16px 16px;
   }
-
   .titulo-proyecto {
     font-size: 2rem;
   }
-
   .descripcion-proyecto {
     font-size: 1.1rem;
   }
-
   .titulo-caro_gale {
     font-size: 1.25rem;
     padding-left: 0;
     margin: 20px 0 12px;
   }
-
   .contenedor-video {
     border-radius: 8px;
     margin-bottom: 32px;
   }
-
   .tecnologias {
     gap: 10px;
   }
@@ -207,17 +235,18 @@ nav ul li a.active {
   .titulo-proyecto {
     font-size: 1.75rem;
   }
-
   .descripcion-proyecto {
     font-size: 1rem;
   }
-
   .titulo-caro_gale {
     font-size: 1.1rem;
   }
-
   .tag {
-    font-size: 0.85rem;
-    padding: 8px;
+    font-size: 0.82rem;
+    padding: 7px 10px;
+  }
+
+  .container-descripcion {
+    margin-left: 30px;
   }
 }
