@@ -4,7 +4,7 @@ html {
 
 body {
   box-sizing: border-box;
-  background: #d6d5d5ab;
+  background: #f4f3f0;
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -77,21 +77,21 @@ body {
   padding: 10px;
   border-radius: 10px;
   box-shadow:
-    1px 1px 10px -3px blueviolet,
-    -1px -1px 10px -3px blueviolet;
-  color: blueviolet;
+    1px 1px 10px -3px #7026B1,
+    -1px -1px 10px -3px #7026B1;
+  color: #7026B1;
   transition: color ease 0.2s;
   font-weight: bold;
   background: white;
 }
 
 .tag:hover {
-  color: rgb(168, 83, 168);
+  color: #5c1e92;
 }
 
 .link-proyecto {
   font-weight: bold;
-  color: blueviolet;
+  color: #7026b1;
   text-decoration: underline;
   transition: color ease 0.2s;
 }
@@ -101,9 +101,36 @@ body {
 }
 
 nav ul li a.active {
-  color: #8b1fff;
+  color: #7026b1;
   font-weight: bold;
-  border-bottom: 2px solid #8b1fff;
+  border-bottom: 2px solid #7026b1;
+}
+
+.btn-link {
+  background-image: linear-gradient(
+    to right,
+    #ffffff 30%,
+    #7026b1 50%,
+    #ffffff 70%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* El blanco lo provee el fondo */
+  animation: brillo 3s linear infinite;
+}
+
+.btn-link:hover{
+  color: white
+}
+
+@keyframes brillo {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
 }
 
 /* ── RESPONSIVE ── */
