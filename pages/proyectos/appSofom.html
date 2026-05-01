@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyectos - SOFOM Mobile</title>
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/navbar.css" />
+    <link rel="stylesheet" href="../../css/carouselProyectos.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../assets/Foto_Mia.jpg"
+    />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <nav>
+        <a href="../../index.html" class="logo-nav">
+          <p>Luis Armando</p>
+        </a>
+        <ul>
+          <li><a href="../../index.html">Inicio</a></li>
+          <li><a href="../sobreMi.html">Sobre mí</a></li>
+          <li><a href="../certificaciones.html">Certificaciones</a></li>
+          <li><a href="../contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <p class="container-btn-volver">
+      <a href="../../index.html">&larr; Volver al inicio</a>
+    </p>
+    <!-- DESCRIPCIÓN DEL PROYECTO -->
+    <div class="container-descripcion">
+      <p class="titulo-proyecto">SOFOM Mobile</p>
+      <p class="descripcion-proyecto">
+        Durante mi estadía de TSU, formé parte de un equipo de tres
+        desarrolladores donde asumí la responsabilidad del
+        <strong>desarrollo integral del Front-End</strong> para una aplicación
+        móvil financiera. El objetivo principal fue digitalizar el otorgamiento
+        de créditos SOFOM, logrando que procesos críticos como el registro y la
+        aprobación se realicen de forma autónoma, eliminando la necesidad de
+        acudir a sucursales físicas.
+      </p>
+      <p class="descripcion-proyecto">
+        Técnicamente, lideré la construcción de la interfaz utilizando
+        <strong>Ionic 7 y Angular</strong>, conectándome a los endpoints del
+        backend mediante <strong>CapacitorHttp</strong> para asegurar una
+        comunicación robusta en dispositivos nativos. Me enfoqué en implementar
+        un flujo de onboarding seguro que incluye validación biométrica,
+        geolocalización y la integración de una firma digital para la
+        formalización inmediata de contratos.
+      </p>
+      <p class="descripcion-proyecto">
+        Este desarrollo me permitió dominar el uso de
+        <strong>Capacitor 6</strong> para acceder a funciones nativas del
+        hardware y gestionar la lógica compleja de registros en múltiples
+        etapas. Debido a la extensión y confidencialidad del sistema completo,
+        en esta sección presento una
+        <strong>exhibición de los módulos y flujos clave</strong> en los que
+        trabajé, destacando la arquitectura de servicios y la integración de
+        APIs financieras.
+      </p>
+    </div>
+
+    <!-- DEMOSTRACIÓN -->
+    <div class="container-demostracion">
+      <!-- CAROUSEL -->
+
+      <p class="titulo-caro_gale">Galeria del proyecto</p>
+
+      <div class="carousel-container">
+        <div class="carousel-slides">
+          <!-- Aqui se inserta el inner de js -->
+        </div>
+
+        <button class="prev" id="prevBtn">&#10094;</button>
+        <button class="next" id="nextBtn">&#10095;</button>
+      </div>
+
+      <p class="titulo-caro_gale">Tecnologias implementadas</p>
+
+      <!-- SECCIÓN DE LAS TECNOOGIAS -->
+      <div class="tecnologias">
+        <p class="tag">Ionic/Angular</p>
+        <p class="tag">TypeScript</p>
+        <p class="tag">Capacitor 6</p>
+        <p class="tag">Biometrics</p>
+        <p class="tag">Geolocalización</p>
+      </div>
+    </div>
+
+    <script src="../../js/carouselProyectos.js"></script>
+    <script src="../../js/proyectos/appSofom.js"></script>
+  </body>
+</html>

@@ -8,6 +8,14 @@ const proyectos = [
     linkPage: "./pages/proyectos/auduxStudio.html",
   },
   {
+    titulo: "SOFOM Mobile | Aplicación de Gestión Financiera",
+    descripcion:
+      "Plataforma híbrida para el otorgamiento de créditos y gestión de clientes SOFOM.",
+    imagen:
+      "https://res.cloudinary.com/dzsalq5g6/image/upload/v1777618369/Pantalla_1_sonlzb.jpg",
+    linkPage: "./pages/proyectos/appSofom.html",
+  },
+  {
     titulo: "Gastos Claros",
     descripcion:
       "Registra gastos y se categorizan automaticamente, observa tus gastos de forma grafica.",
