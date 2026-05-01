@@ -62,6 +62,7 @@ document.getElementById("nextBtn").addEventListener("click", () => {
 function updateCarousel() {
   const offset = currentIndex * -100;
   slidesContainer.style.transform = `translateX(${offset}%)`;
+  updateDots();
 }
 
 function renderSlides(data) {
@@ -86,3 +87,32 @@ function renderSlides(data) {
 }
 
 renderSlides(proyectos);
+
+function renderDots() {
+  const wrapper = document.querySelector(".carousel-wrapper");
+
+  const dotsContainer = document.createElement("div");
+  dotsContainer.classList.add("carousel-dots");
+
+  proyectos.forEach((_, i) => {
+    const dot = document.createElement("span");
+    dot.classList.add("dot");
+    if (i === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => {
+      currentIndex = i;
+      updateCarousel();
+      updateDots();
+    });
+    dotsContainer.appendChild(dot);
+  });
+
+  wrapper.insertAdjacentElement("afterend", dotsContainer);
+}
+
+function updateDots() {
+  document.querySelectorAll(".dot").forEach((dot, i) => {
+    dot.classList.toggle("active", i === currentIndex);
+  });
+}
+
+renderDots();

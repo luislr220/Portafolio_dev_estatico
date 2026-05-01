@@ -6,7 +6,6 @@ class ProyectoCarousel {
     this.nextBtn = document.getElementById(config.nextBtnId);
     this.autoDelay = config.autoDelay || 3000;
 
-    // Estado interno
     this.currentIndex = 0;
     this.totalSlides = this.proyectos.length;
     this.autoPlayInterval = null;
@@ -20,6 +19,7 @@ class ProyectoCarousel {
 
   init() {
     this.renderSlides();
+    this.renderDots();
     this.addEventListeners();
     this.startAutoPlay();
   }
@@ -39,9 +39,37 @@ class ProyectoCarousel {
       .join("");
   }
 
+  renderDots() {
+    const carouselContainer = this.container.closest(".carousel-container");
+
+    const dotsContainer = document.createElement("div");
+    dotsContainer.classList.add("carousel-dots");
+
+    this.proyectos.forEach((_, i) => {
+      const dot = document.createElement("span");
+      dot.classList.add("dot");
+      if (i === 0) dot.classList.add("active");
+      dot.addEventListener("click", () => {
+        this.currentIndex = i;
+        this.updateCarousel();
+        this.resetAutoPlay();
+      });
+      dotsContainer.appendChild(dot);
+    });
+
+    carouselContainer.insertAdjacentElement("afterend", dotsContainer);
+  }
+
+  updateDots() {
+    document.querySelectorAll(".dot").forEach((dot, i) => {
+      dot.classList.toggle("active", i === this.currentIndex);
+    });
+  }
+
   updateCarousel() {
     const offset = this.currentIndex * -100;
     this.container.style.transform = `translateX(${offset}%)`;
+    this.updateDots();
   }
 
   nextSlide() {
