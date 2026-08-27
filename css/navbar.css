@@ -8,6 +8,30 @@ header {
   border-bottom: 1px solid rgba(112, 38, 177, 0.12);
 }
 
+/* ── AJUSTE PARA LANDING PAGE DE UNA SOLA SECCIÓN ──
+   Como el header ahora es sticky y la navegación usa anclas (#inicio,
+   #sobre-mi, #proyectos, #certificaciones, #contacto) dentro de una
+   sola página, sin esto el header taparía el inicio de cada sección
+   al hacer scroll hacia ella. */
+#inicio,
+#sobre-mi,
+#proyectos,
+#certificaciones,
+#contacto {
+  scroll-margin-top: 80px;
+}
+
+@media (max-width: 860px) {
+  #inicio,
+  #sobre-mi,
+  #proyectos,
+  #certificaciones,
+  #contacto {
+    /* aquí el nav pasa a 2 filas (logo + links), por lo que es más alto */
+    scroll-margin-top: 110px;
+  }
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -19,10 +43,12 @@ nav {
 
 ul {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
-  gap: 8px;
+  gap: 6px 8px;
   margin: 0;
   padding: 0;
+  justify-content: flex-end;
 }
 
 li {
@@ -42,6 +68,7 @@ ul li a {
   display: inline-block;
   padding: 6px 12px;
   border-radius: 4px;
+  white-space: nowrap;
   transition:
     color 0.2s ease,
     background 0.2s ease;
@@ -71,16 +98,29 @@ ul li a:hover {
 
 /* ── RESPONSIVE ── */
 
-@media (max-width: 600px) {
+/* Con 5 opciones en el menú, la fila logo + links se satura antes que
+   con 4, así que el layout apilado (logo arriba, links centrados abajo)
+   arranca en una pantalla más ancha que antes. */
+@media (max-width: 860px) {
   nav {
-    padding: 10px 16px;
+    padding: 10px 24px;
     flex-direction: column;
     gap: 6px;
   }
 
   ul {
-    gap: 4px;
     justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    padding: 10px 16px;
+    gap: 6px;
+  }
+
+  ul {
+    gap: 4px 6px;
   }
 
   ul li a {
@@ -95,11 +135,18 @@ ul li a:hover {
 
 @media (max-width: 480px) {
   ul {
-    gap: 2px;
+    gap: 3px 4px;
   }
 
   ul li a {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     padding: 4px 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  ul li a {
+    font-size: 0.72rem;
+    padding: 3px 6px;
   }
 }

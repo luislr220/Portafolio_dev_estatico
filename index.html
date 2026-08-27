@@ -7,33 +7,36 @@
     <link rel="stylesheet" href="./css/carousel.css" />
     <link rel="stylesheet" href="./css/navbar.css" />
     <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/sobreMi.css" />
+    <link rel="stylesheet" href="./css/certificaciones.css" />
+    <link rel="stylesheet" href="./css/contacto.css" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./assets/Foto_Mia.jpg"
     />
-    <title>Inicio - Luis Armando</title>
+    <title>Luis Armando - Portfolio</title>
   </head>
   <body>
     <!-- NAVBAR -->
     <header>
       <nav>
-        <a href="./index.html" class="logo-nav">
+        <a href="#inicio" class="logo-nav">
           <p>Luis Armando</p>
         </a>
         <ul>
-          <li><a href="./index.html">Inicio</a></li>
-          <li><a href="./pages/sobreMi.html">Sobre mí</a></li>
-          <li><a href="./pages/certificaciones.html">Certificaciones</a></li>
-          <li><a href="./pages/contacto.html">Contacto</a></li>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#proyectos">Mis proyectos</a></li>
+          <li><a href="#certificaciones">Certificaciones</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
     </header>
 
-    <!-- SECCIÓN DE MI BIENVENIDA -->
-
-    <div class="hero-section">
+    <!-- ══════════════ SECCIÓN: INICIO ══════════════ -->
+    <div class="hero-section" id="inicio">
       <div class="container-bienvenida">
         <p class="hola">¡Hola!</p>
         <p class="descripcion-bienvenida">
@@ -57,8 +60,60 @@
       </div>
     </div>
 
-    <!-- SECCIÓN DEL CAROUSEL -->
-    <p class="titulo-trabajo" id="proyectos">Mis Proyectos</p>
+    <!-- ══════════════ SECCIÓN: SOBRE MÍ ══════════════ -->
+    <p class="sobreMi-titulo" id="sobre-mi">Sobre mí</p>
+
+    <div class="container-sobreMi">
+      <div class="mi-presentacion">
+        <div class="sobreMi-Foto">
+          <img
+            src="https://res.cloudinary.com/dzsalq5g6/image/upload/v1777417864/Foto_Mia_plrzdb.jpg"
+            alt="Foto de Luis"
+          />
+        </div>
+        <div class="linea-vertical"></div>
+        <div class="sobreMi-Descripcion">
+          <p class="sobreMi-Nombre">Luis Armando Largo Ramírez</p>
+          <p class="sobreMi-descripcion">
+            Desarrollador de software especializado en
+            <strong>lógica de Frontend e integración de sistemas</strong>. Me
+            apasiona transformar problemas complejos en soluciones funcionales,
+            optimizando la comunicación entre el usuario y el servidor.
+          </p>
+
+          <p class="sobreMi-descripcion">
+            Como desarrollador <strong>FullStack</strong>, combino la robustez
+            de <strong>Node.js</strong> en el backend con la agilidad de
+            <strong>Angular</strong> en el frontend. Mi enfoque no es solo
+            escribir código, sino construir arquitecturas escalables, seguras y
+            eficientes que aporten valor real al usuario final.
+          </p>
+        </div>
+      </div>
+      <hr />
+
+      <div class="habilidades">
+        <p class="sobreMi-Nombre">Habilidades</p>
+        <div class="tecnologias sobremi">
+          <p class="tag">Angular 19+</p>
+          <p class="tag">TypeScript</p>
+          <p class="tag">JavaScript</p>
+          <p class="tag">Node.js</p>
+
+          <p class="tag">API Integration</p>
+          <p class="tag">Docker</p>
+          <p class="tag">Auth & Security</p>
+
+          <p class="tag">Git</p>
+          <p class="tag">Ubuntu/Linux</p>
+          <p class="tag">PostgreSQL</p>
+          <p class="tag">MongoDB</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════ SECCIÓN: PROYECTOS ══════════════ -->
+    <p class="titulo-trabajo" id="proyectos">Mis proyectos</p>
 
     <div class="carousel-wrapper">
       <button class="prev" id="prevBtn">&#10094;</button>
@@ -72,7 +127,119 @@
       <button class="next" id="nextBtn">&#10095;</button>
     </div>
 
+    <!-- ══════════════ SECCIÓN: CERTIFICACIONES ══════════════ -->
+    <p class="cert-titulo" id="certificaciones">Certificaciones</p>
+
+    <div class="cert-grid">
+      <!-- ══ TARJETA ══ -->
+      <div class="cert-card">
+        <img
+          class="cert-img"
+          src="https://res.cloudinary.com/dzsalq5g6/image/upload/v1777447774/Certificacion_scrum_zsuzkc.jpg"
+          alt="Scrum Fundamentals Certified (SFC)"
+        />
+        <div class="cert-body">
+          <span class="cert-emisor">SCRUMstudy</span>
+          <p class="cert-nombre">Scrum Fundamentals Certified (SFC)</p>
+          <span class="cert-fecha">2025</span>
+        </div>
+        <div class="cert-divider"></div>
+        <div class="cert-footer">
+          <div class="cert-tags">
+            <span class="cert-tag">Scrum</span>
+          </div>
+          <a
+            class="cert-link"
+            href="https://www.scrumstudy.com/certification/verify?type=SFC&number=1094518"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver certificado
+            <svg
+              width="11"
+              height="11"
+              viewBox="0 0 12 12"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M2 10L10 2M10 2H5M10 2v5" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- ══ TARJETA ══ -->
+      <div class="cert-card">
+        <img
+          class="cert-img"
+          src="https://res.cloudinary.com/dzsalq5g6/image/upload/v1777447685/Certificado_Introduccion_A_La_CiberSeguridad_spl8ei.jpg"
+          alt="Introduccion a la Ciberseguridad"
+        />
+        <div class="cert-body">
+          <span class="cert-emisor">CISCO Netcad</span>
+          <p class="cert-nombre">Introduccion a la Ciberseguridad</p>
+          <span class="cert-fecha">2024</span>
+        </div>
+        <div class="cert-divider"></div>
+        <div class="cert-footer">
+          <div class="cert-tags">
+            <span class="cert-tag">Seguridad</span>
+          </div>
+          <span class="cert-no-link">Sin enlace disponible</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════ SECCIÓN: CONTACTO ══════════════ -->
+    <section class="contacto-seccion" id="contacto">
+      <p class="sobreMi-titulo">¡Hablemos!</p>
+
+      <div class="container-contacto-minimal">
+        <div class="card-contacto-directo">
+          <div class="header-contacto">
+            <h3>¿Tienes un proyecto en mente o una vacante FullStack?</h3>
+            <p>
+              Estoy disponible para colaboraciones y oportunidades
+              profesionales. Elige el canal que prefieras:
+            </p>
+          </div>
+
+          <div class="grid-enlaces">
+            <a
+              href="https://github.com/luislr220"
+              target="_blank"
+              class="enlace-card"
+            >
+              <div class="icon-container">
+                <img src="./assets/icon-github.png" alt="icon-github" />
+              </div>
+              <div class="enlace-texto">
+                <span>GitHub</span>
+                <p>Revisa mis repositorios y lógica</p>
+              </div>
+            </a>
+
+            <div
+              class="enlace-card principal"
+              id="copyEmail"
+              style="cursor: pointer"
+            >
+              <div class="icon-container">
+                <img src="./assets/icon-copy.png" alt="icon-copy" />
+              </div>
+              <div class="enlace-texto">
+                <span>Correo Electrónico</span>
+                <p id="emailText">largoramirezluisarmando@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <script src="./js/carousel.js"></script>
+    <script src="./js/contacto.js"></script>
     <script src="./js/navbar.js"></script>
   </body>
 </html>
