@@ -176,3 +176,22 @@
     font-size: 24px;
   }
 }
+
+/* ── CTAs del hero ── */
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 12px;
+}
+
+.btn-scroll.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+.btn-scroll.btn-primary:hover {
+  background: #5c1e92;
+  border-color: #5c1e92;
+  color: white;
+}

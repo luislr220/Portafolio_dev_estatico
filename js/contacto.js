@@ -8,7 +8,7 @@ document.getElementById("copyEmail").addEventListener("click", function () {
 
     setTimeout(() => {
       this.querySelector("span").innerText = originalText;
-      this.style.backgroundColor = "#8b1fff";
+      this.style.backgroundColor = "";
     }, 2000);
   });
 });
