@@ -40,9 +40,13 @@ body {
    texto suelto. */
 .migas {
   display: inline-flex;
+  flex-direction: row; /* explícito: jamás en columna */
+  justify-content: flex-start;
   align-items: center;
   gap: 7px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* las migas NUNCA se parten: una sola línea siempre */
+  overflow-x: auto; /* si no caben, el chip se desplaza horizontalmente */
+  scrollbar-width: none;
   width: fit-content;
   max-width: calc(100% - 32px);
   margin: 20px 24px 20px 80px;
@@ -55,7 +59,12 @@ body {
   font-size: 0.85rem;
 }
 
+.migas::-webkit-scrollbar {
+  display: none;
+}
+
 .migas a {
+  font-size: inherit; /* hereda el tamaño del chip, no el global de navbar */
   color: var(--accent);
   font-weight: 600;
   padding: 2px 2px;
@@ -89,6 +98,7 @@ body {
 @media (max-width: 600px) {
   .migas {
     margin: 14px 16px 12px 16px;
+    padding-right: 20px;
     font-size: 0.8rem;
   }
 }
@@ -262,7 +272,7 @@ body {
   color: rgb(13, 148, 136);
 }
 
-nav ul li a.active {
+header ul li a.active {
   color: var(--accent);
   font-weight: bold;
   border-bottom: 2px solid var(--accent);

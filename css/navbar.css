@@ -9,10 +9,9 @@ header {
 }
 
 /* ── AJUSTE PARA LANDING PAGE DE UNA SOLA SECCIÓN ──
-   Como el header ahora es sticky y la navegación usa anclas (#inicio,
-   #sobre-mi, #proyectos, #certificaciones, #contacto) dentro de una
-   sola página, sin esto el header taparía el inicio de cada sección
-   al hacer scroll hacia ella. */
+   Como el header es sticky y la navegación usa anclas (#inicio,
+   #sobre-mi, #proyectos, #certificaciones, #contacto), sin esto el
+   header taparía el inicio de cada sección al hacer scroll. */
 #inicio,
 #sobre-mi,
 #proyectos,
@@ -21,18 +20,11 @@ header {
   scroll-margin-top: 80px;
 }
 
-@media (max-width: 860px) {
-  #inicio,
-  #sobre-mi,
-  #proyectos,
-  #certificaciones,
-  #contacto {
-    /* aquí el nav pasa a 2 filas (logo + links), por lo que es más alto */
-    scroll-margin-top: 110px;
-  }
-}
-
-nav {
+/* IMPORTANTE: estos estilos se limitan al header (header nav, header ul…).
+   Antes eran selectores sueltos (nav, ul, li) y afectaban a CUALQUIER
+   <nav>/<ul> del sitio, como las migas de pan. */
+header nav {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,7 +33,7 @@ nav {
   padding: 14px 40px;
 }
 
-ul {
+header ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -51,10 +43,11 @@ ul {
   justify-content: flex-end;
 }
 
-li {
+header li {
   font-weight: 600;
 }
 
+/* Base global para enlaces (la usan cards, botones y demás del sitio) */
 a {
   text-decoration: none;
   color: var(--text-main);
@@ -64,7 +57,7 @@ a {
   transition: color 0.2s ease;
 }
 
-ul li a {
+header ul li a {
   display: inline-block;
   padding: 6px 12px;
   border-radius: 4px;
@@ -74,7 +67,7 @@ ul li a {
     background 0.2s ease;
 }
 
-ul li a:hover {
+header ul li a:hover {
   color: var(--accent);
   background: rgba(15, 118, 110, 0.06);
 }
@@ -96,57 +89,125 @@ ul li a:hover {
   color: var(--accent);
 }
 
-/* ── RESPONSIVE ── */
+/* ── BOTÓN HAMBURGUESA (oculto en escritorio) ── */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
 
-/* Con 5 opciones en el menú, la fila logo + links se satura antes que
-   con 4, así que el layout apilado (logo arriba, links centrados abajo)
-   arranca en una pantalla más ancha que antes. */
+.nav-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--text-main);
+  transition:
+    transform 0.25s ease,
+    opacity 0.2s ease;
+}
+
+/* ── NAVEGACIÓN MÓVIL ──
+   El header queda en una sola fila (logo + hamburguesa) y el menú se
+   despliega como panel debajo, con objetivos táctiles de 44px+.
+   Se cierra al elegir un enlace, tocar fuera o pulsar Escape. */
 @media (max-width: 860px) {
-  nav {
-    padding: 10px 24px;
+  header nav {
+    padding: 8px 16px;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  header ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
     flex-direction: column;
-    gap: 6px;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 2px;
+    padding: 8px 12px 12px;
+    background: rgba(244, 243, 240, 0.98);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(15, 118, 110, 0.12);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition:
+      opacity 0.22s ease,
+      transform 0.22s ease,
+      visibility 0.22s;
   }
 
-  ul {
-    justify-content: center;
+  header.nav-open ul {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  header ul li a {
+    display: block;
+    padding: 12px 14px;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+
+  header ul li a:hover,
+  header ul li a:focus-visible {
+    background: rgba(15, 118, 110, 0.07);
+  }
+
+  /* La página actual se marca con fondo, no con línea inferior */
+  header nav ul li a.active {
+    border-bottom: none;
+    background: rgba(15, 118, 110, 0.1);
+  }
+
+  /* Hamburguesa que se transforma en X */
+  header.nav-open .nav-toggle-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  header.nav-open .nav-toggle-bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  header.nav-open .nav-toggle-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
   }
 }
 
-@media (max-width: 600px) {
-  nav {
-    padding: 10px 16px;
-    gap: 6px;
-  }
-
-  ul {
-    gap: 4px 6px;
-  }
-
-  ul li a {
-    font-size: 0.85rem;
-    padding: 5px 10px;
-  }
-
-  .logo-nav {
-    font-size: 1.05rem;
+@media (prefers-reduced-motion: reduce) {
+  .nav-toggle-bar {
+    transition: none;
   }
 }
 
-@media (max-width: 480px) {
-  ul {
-    gap: 3px 4px;
-  }
-
-  ul li a {
-    font-size: 0.78rem;
-    padding: 4px 8px;
-  }
-}
-
-@media (max-width: 360px) {
-  ul li a {
-    font-size: 0.72rem;
-    padding: 3px 6px;
+@media (max-width: 860px) and (prefers-reduced-motion: reduce) {
+  header ul {
+    transition: none;
   }
 }
