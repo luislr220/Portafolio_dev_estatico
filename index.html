@@ -87,7 +87,7 @@
     <!-- ══════════════ SECCIÓN: SOBRE MÍ ══════════════ -->
     <p class="sobreMi-titulo" id="sobre-mi">Sobre mí</p>
 
-    <div class="container-sobreMi">
+    <div class="container-sobreMi reveal">
       <div class="mi-presentacion">
         <div class="sobreMi-Descripcion">
           <p class="sobreMi-Nombre">Luis Armando Largo Ramírez</p>
@@ -136,7 +136,7 @@
 
     <div class="cert-grid">
       <!-- ══ TARJETA ══ -->
-      <div class="cert-card">
+      <div class="cert-card reveal">
         <img
           class="cert-img"
           src="https://res.cloudinary.com/dzsalq5g6/image/upload/v1777447774/Certificacion_scrum_zsuzkc.jpg"
@@ -174,7 +174,7 @@
       </div>
 
       <!-- ══ TARJETA ══ -->
-      <div class="cert-card">
+      <div class="cert-card reveal">
         <img
           class="cert-img"
           src="https://res.cloudinary.com/dzsalq5g6/image/upload/v1777447685/Certificado_Introduccion_A_La_CiberSeguridad_spl8ei.jpg"
@@ -200,7 +200,7 @@
       <p class="sobreMi-titulo">¡Hablemos!</p>
 
       <div class="container-contacto-minimal">
-        <div class="card-contacto-directo">
+        <div class="card-contacto-directo reveal">
           <div class="header-contacto">
             <h3>¿Tienes un proyecto en mente o una vacante FullStack?</h3>
             <p>
@@ -242,8 +242,29 @@
       </div>
     </section>
 
+    <button
+      class="btn-top"
+      id="btnTop"
+      aria-label="Volver al inicio"
+      title="Volver al inicio"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M6 15l6-6 6 6" />
+      </svg>
+    </button>
+
     <script src="./js/cards.js"></script>
     <script src="./js/contacto.js"></script>
+    <script src="./js/reveal.js"></script>
+    <script src="./js/btnTop.js"></script>
     <script src="./js/navbar.js"></script>
   </body>
 </html>

@@ -67,8 +67,8 @@
   display: flex;
   align-items: center;
   padding: 18px 20px;
-  background: #faf8ff;
-  border: 1px solid rgba(112, 38, 177, 0.15);
+  background: #f2f8f8;
+  border: 1px solid rgba(15, 118, 110, 0.15);
   border-radius: 8px;
   text-decoration: none;
   transition:
@@ -83,7 +83,7 @@
   transform: translateY(-2px);
   border-color: var(--accent);
   background: white;
-  box-shadow: 0 6px 20px rgba(112, 38, 177, 0.12);
+  box-shadow: 0 6px 20px rgba(15, 118, 110, 0.12);
 }
 
 .enlace-card.principal {
@@ -92,9 +92,9 @@
 }
 
 .enlace-card.principal:hover {
-  background: #6020a0;
-  border-color: #6020a0;
-  box-shadow: 0 6px 20px rgba(112, 38, 177, 0.3);
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+  box-shadow: 0 6px 20px rgba(15, 118, 110, 0.3);
 }
 
 .enlace-card.principal .enlace-texto span,
@@ -104,7 +104,7 @@
 
 .icon-container {
   margin-right: 18px;
-  background: rgba(112, 38, 177, 0.1);
+  background: rgba(15, 118, 110, 0.1);
   width: 46px;
   height: 46px;
   flex-shrink: 0;

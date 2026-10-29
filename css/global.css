@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@400;500;600&display=swap");
 
 :root {
-  --accent: #7026b1;
-  --accent-dim: rgba(112, 38, 177, 0.18);
-  --accent-glow: 0 0 18px rgba(112, 38, 177, 0.25);
+  --accent: #0f766e;
+  --accent-dark: #115e59;
+  --accent-dim: rgba(15, 118, 110, 0.18);
+  --accent-glow: 0 0 18px rgba(15, 118, 110, 0.25);
   --dark-bg: #1c1f26;
   --text-main: #2e2e2e;
   --text-muted: #555;
@@ -30,6 +31,129 @@ body {
 
 .container-btn-volver a {
   font-weight: 600;
+}
+
+/* ── MIGAS DE PAN (páginas internas con jerarquía) ──
+   Se usan en las páginas de proyecto: Inicio › Proyectos › Nombre.
+   Se presentan como un "chip" de navegación (mismo lenguaje visual que
+   las tarjetas del sitio) para que se lea como componente y no como
+   texto suelto. */
+.migas {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+  width: fit-content;
+  max-width: calc(100% - 32px);
+  margin: 20px 24px 20px 80px;
+  padding: 9px 16px;
+  background: white;
+  border: 1px solid rgba(15, 118, 110, 0.16);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  font-size: 0.85rem;
+}
+
+.migas a {
+  color: var(--accent);
+  font-weight: 600;
+  padding: 2px 2px;
+  border-radius: 4px;
+  transition: color 0.2s ease;
+}
+
+.migas a:hover {
+  color: var(--accent-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.migas-sep {
+  color: #c2c9c7;
+  font-size: 0.95em;
+  user-select: none;
+}
+
+.migas-actual {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .migas {
+    margin: 18px 24px 16px 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .migas {
+    margin: 14px 16px 12px 16px;
+    font-size: 0.8rem;
+  }
+}
+
+/* ── BOTÓN FLOTANTE: volver arriba ──
+   Se usa en index.html y en las páginas de proyecto (las que más
+   scrollean). Queda oculto hasta superar el umbral de scroll. */
+.btn-top {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 90;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 4px 14px rgba(15, 118, 110, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    background 0.2s ease,
+    visibility 0.25s;
+}
+
+.btn-top--visible {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.btn-top:hover {
+  background: var(--accent-dark);
+  box-shadow: 0 6px 18px rgba(15, 118, 110, 0.4);
+}
+
+.btn-top svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 480px) {
+  .btn-top {
+    right: 14px;
+    bottom: 14px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-top {
+    transform: none;
+    transition:
+      opacity 0.2s ease,
+      background 0.2s ease,
+      visibility 0.2s;
+  }
 }
 
 .contenedor-video {
@@ -108,10 +232,10 @@ body {
 }
 
 .tag {
-  border: 1px solid rgba(112, 38, 177, 0.25);
+  border: 1px solid rgba(15, 118, 110, 0.25);
   padding: 8px 14px;
   border-radius: 6px;
-  box-shadow: 0 0 10px -2px rgba(112, 38, 177, 0.2);
+  box-shadow: 0 0 10px -2px rgba(15, 118, 110, 0.2);
   color: var(--accent);
   transition:
     box-shadow 0.2s ease,
@@ -123,8 +247,8 @@ body {
 }
 
 .tag:hover {
-  color: #5c1e92;
-  box-shadow: 0 0 16px -2px rgba(112, 38, 177, 0.35);
+  color: var(--accent-dark);
+  box-shadow: 0 0 16px -2px rgba(15, 118, 110, 0.35);
 }
 
 .link-proyecto {
@@ -135,7 +259,7 @@ body {
 }
 
 .link-proyecto:hover {
-  color: rgb(168, 83, 168);
+  color: rgb(13, 148, 136);
 }
 
 nav ul li a.active {
@@ -148,7 +272,7 @@ nav ul li a.active {
   background-image: linear-gradient(
     to right,
     #ffffff 30%,
-    #7026b1 50%,
+    #0f766e 50%,
     #ffffff 70%
   );
   background-size: 200% auto;
@@ -248,5 +372,31 @@ nav ul li a.active {
 
   .container-descripcion {
     margin-left: 30px;
+  }
+}
+
+/* ── REVEAL AL HACER SCROLL ──
+   Se usa en index.html (secciones y cards generadas por JS).
+   El contenido es visible siempre; si no hay JS o el usuario
+   prefiere menos movimiento, se muestra sin animación. */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.55s ease,
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

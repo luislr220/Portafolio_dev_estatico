@@ -22,7 +22,7 @@
 
 .proyecto-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(112, 38, 177, 0.13);
+  box-shadow: 0 12px 40px rgba(15, 118, 110, 0.13);
 }
 
 .card-img {
@@ -79,7 +79,7 @@
 }
 
 .card-tag {
-  border: 1px solid rgba(112, 38, 177, 0.25);
+  border: 1px solid rgba(15, 118, 110, 0.25);
   padding: 4px 10px;
   border-radius: 6px;
   color: var(--accent);
@@ -107,9 +107,9 @@
 }
 
 .card-btn:hover {
-  background: #5c1e92;
-  border-color: #5c1e92;
-  box-shadow: 0 0 12px rgba(112, 38, 177, 0.25);
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+  box-shadow: 0 0 12px rgba(15, 118, 110, 0.25);
 }
 
 .card-btn.sec {
@@ -118,8 +118,8 @@
 }
 
 .card-btn.sec:hover {
-  background: rgba(112, 38, 177, 0.06);
-  box-shadow: 0 0 10px rgba(112, 38, 177, 0.15);
+  background: rgba(15, 118, 110, 0.06);
+  box-shadow: 0 0 10px rgba(15, 118, 110, 0.15);
 }
 
 @media (max-width: 600px) {

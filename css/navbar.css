@@ -5,7 +5,7 @@ header {
   background: rgba(244, 243, 240, 0.92);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(112, 38, 177, 0.12);
+  border-bottom: 1px solid rgba(15, 118, 110, 0.12);
 }
 
 /* ── AJUSTE PARA LANDING PAGE DE UNA SOLA SECCIÓN ──
@@ -76,7 +76,7 @@ ul li a {
 
 ul li a:hover {
   color: var(--accent);
-  background: rgba(112, 38, 177, 0.06);
+  background: rgba(15, 118, 110, 0.06);
 }
 
 .logo-nav {

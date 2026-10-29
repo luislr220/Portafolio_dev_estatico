@@ -49,7 +49,7 @@ const grid = document.querySelector(".proyectos-grid");
 grid.innerHTML = proyectos
   .map(
     (p) => `
-      <article class="proyecto-card">
+      <article class="proyecto-card reveal">
         <a class="card-img" href="${p.linkPage}" tabindex="-1" aria-hidden="true">
           <img src="${p.imagen}" alt="Captura de ${p.titulo}" loading="lazy" />
         </a>

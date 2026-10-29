@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,9 +33,13 @@
       </nav>
     </header>
 
-    <p class="container-btn-volver">
-      <a href="../../index.html">&larr; Volver al inicio</a>
-    </p>
+    <nav class="migas" aria-label="Ruta de navegación">
+      <a href="../../index.html">Inicio</a>
+      <span class="migas-sep" aria-hidden="true">›</span>
+      <a href="../../index.html#proyectos">Proyectos</a>
+      <span class="migas-sep" aria-hidden="true">›</span>
+      <span class="migas-actual" aria-current="page">Gastos Claros</span>
+    </nav>
 
     <!-- DESCRIPCIÓN DEL PROYECTO -->
     <div class="container-descripcion">
@@ -96,8 +100,28 @@
       </div>
     </div>
 
+    <button
+      class="btn-top"
+      id="btnTop"
+      aria-label="Volver al inicio"
+      title="Volver al inicio"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M6 15l6-6 6 6" />
+      </svg>
+    </button>
+
     <script src="../../js/youtube-api.js"></script>
     <script src="../../js/carouselProyectos.js"></script>
     <script src="../../js/proyectos/gastosClaros.js"></script>
+    <script src="../../js/btnTop.js"></script>
   </body>
 </html>

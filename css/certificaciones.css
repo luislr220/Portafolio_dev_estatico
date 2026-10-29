@@ -49,7 +49,7 @@
 
 .cert-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(112, 38, 177, 0.13);
+  box-shadow: 0 12px 40px rgba(15, 118, 110, 0.13);
 }
 
 /* ── IMAGEN / PLACEHOLDER ── */
@@ -64,7 +64,7 @@
 .cert-img-placeholder {
   width: 100%;
   aspect-ratio: 16 / 9;
-  background: #f0eaf8;
+  background: #e6f4f2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -140,10 +140,10 @@
 }
 
 .cert-tag {
-  border: 1px solid rgba(112, 38, 177, 0.25);
+  border: 1px solid rgba(15, 118, 110, 0.25);
   padding: 4px 10px;
   border-radius: 6px;
-  box-shadow: 0 0 8px -2px rgba(112, 38, 177, 0.18);
+  box-shadow: 0 0 8px -2px rgba(15, 118, 110, 0.18);
   color: var(--accent);
   font-size: 0.72rem;
   font-weight: 600;
@@ -155,8 +155,8 @@
 }
 
 .cert-tag:hover {
-  color: #5c1e92;
-  box-shadow: 0 0 14px -2px rgba(112, 38, 177, 0.3);
+  color: var(--accent-dark);
+  box-shadow: 0 0 14px -2px rgba(15, 118, 110, 0.3);
 }
 
 /* Con enlace */
@@ -168,7 +168,7 @@
   font-weight: 600;
   color: var(--accent);
   text-decoration: none;
-  border: 1.5px solid rgba(112, 38, 177, 0.3);
+  border: 1.5px solid rgba(15, 118, 110, 0.3);
   padding: 5px 12px;
   border-radius: 4px;
   flex-shrink: 0;
@@ -177,9 +177,9 @@
 }
 
 .cert-link:hover {
-  background: rgba(112, 38, 177, 0.06);
+  background: rgba(15, 118, 110, 0.06);
   border-color: var(--accent);
-  box-shadow: 0 0 10px rgba(112, 38, 177, 0.15);
+  box-shadow: 0 0 10px rgba(15, 118, 110, 0.15);
 }
 
 /* Sin enlace */

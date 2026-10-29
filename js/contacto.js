@@ -4,7 +4,7 @@ document.getElementById("copyEmail").addEventListener("click", function () {
   navigator.clipboard.writeText(email).then(() => {
     const originalText = this.querySelector("span").innerText;
     this.querySelector("span").innerText = "¡Copiado!";
-    this.style.backgroundColor = "#28a745";
+    this.style.backgroundColor = "#15803d";
 
     setTimeout(() => {
       this.querySelector("span").innerText = originalText;
