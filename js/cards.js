@@ -3,12 +3,13 @@ const proyectos = [
     titulo: "Audux Studio",
     rol: "Desarrollo, seguridad y DevOps",
     descripcion:
-      "Plataforma con IA para separar voz e instrumental, extraer letras y generar videos de karaoke. Incluye filtros y ecualizador, 2FA y despliegue con Docker Compose en VPS.",
+      "Automatiza la creación de pistas de karaoke —separación de voz e instrumental, extracción de letras y video— que antes exigía software especializado y equipos de alto rendimiento.",
     imagen:
       "https://res.cloudinary.com/dzsalq5g6/image/upload/v1777164524/AuduxStudio_vcaa0d.png",
     tags: ["React", "Node.js", "Docker", "FFmpeg"],
     linkPage: "./pages/proyectos/auduxStudio.html",
     demo: "https://auduxstudio.com/",
+    demoLabel: "App en vivo ↗",
   },
   {
     titulo: "SOFOM Mobile",
@@ -64,7 +65,7 @@ grid.innerHTML = proyectos
           <a class="card-btn" href="${p.linkPage}">Ver proyecto</a>
           ${
             p.demo
-              ? `<a class="card-btn sec" href="${p.demo}" target="_blank" rel="noopener noreferrer">Demo en vivo ↗</a>`
+              ? `<a class="card-btn sec" href="${p.demo}" target="_blank" rel="noopener noreferrer">${p.demoLabel ?? "Demo en vivo ↗"}</a>`
               : ""
           }
         </div>
